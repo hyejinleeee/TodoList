@@ -1,0 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+
+#root {
+  font-family: Hahmlet, sans-serif;
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+}
