@@ -19,8 +19,8 @@ function TodoContainer() {
     <div>
       <TodoForm setTodos={setTodos} />
       <div>
-      <TodoList todos={workingTodos}  />     
-      <TodoList todos={doneTodos}  />
+      <TodoList title="🔥 Working" todos={workingTodos} /> 
+      <TodoList title="✅ Done" todos={doneTodos} />     
       </div>
     </div>
   );

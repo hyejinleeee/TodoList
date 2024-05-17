@@ -1,13 +1,13 @@
 import React from 'react';
 
-function TodoItem({ todo, deleteTodo, toggleTodo }) {
+function TodoItem({ todo }) {
   const { id, title, body, isDone } = todo;
 
   return (
     <li>
-      <strong>{title}</strong><br /> {body} <br /><br />
-      <button className='del-btn' onClick={() => deleteTodo(id)}>삭제</button>
-      <button className='toggle-btn' onClick={() => toggleTodo(id)}>{isDone ? '취소' : '완료'}</button>
+      <strong>{toto.title}</strong><br /> {todo.content} <br /><br />
+      <button className='del-btn'>삭제</button>
+      <button className='toggle-btn'>{isDone ? '취소' : '완료'}</button>
     </li>
   );
 }
