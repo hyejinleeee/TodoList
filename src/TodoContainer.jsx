@@ -9,19 +9,18 @@ function TodoContainer() {
       title: "할일 1",
       content: "할일 1 내용",
       isDone: false,
-    }
+    },
   ]);
 
-  const workingTodos = todos.filter(todo => !todo.isDone);
-  const doneTodos = todos.filter(todo => todo.isDone);
+  const workingTodos = todos.filter((todo) => !todo.isDone);
+  const doneTodos = todos.filter((todo) => todo.isDone);
 
   return (
     <div>
+      <h1>Todo List</h1>
       <TodoForm setTodos={setTodos} />
-      <div>
-      <TodoList title="🔥 Working" todos={workingTodos} /> 
-      <TodoList title="✅ Done" todos={doneTodos} />     
-      </div>
+      <TodoList title="🔥 Working" todos={workingTodos} setTodos={setTodos}/> 
+      <TodoList title="✅ Done" todos={doneTodos} setTodos={setTodos}/>     
     </div>
   );
 }

@@ -15,24 +15,27 @@ function TodoForm({setTodos}) {
 
    const nextTodo = {
     id: crypto.randomUUID(),
-    title,
-    content,
+    title: title,
+    content:content,
     isDone: false
    }
 
    //useState의 비동기성
-   setTodos((prevTodos)=> [nextTodo, ...prevTodos]);
+   setTodos((prev)=> [...prev, nextTodo]);
 
    e.target.reset();
-
+   
   }
 
   return (
+    <div>
     <form onSubmit={onSubmit} className='todo-form'>
       <input type="text" name='title'  placeholder="제목" />
       <input type="text" name='content' placeholder="내용" />
       <button type="submit">추가하기</button>
     </form>
+    </div>
+
   );
 }
 
